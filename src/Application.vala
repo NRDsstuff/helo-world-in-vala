@@ -1,7 +1,7 @@
 public class MyApp : Gtk.Application{
     public MyApp (){
         Object(
-            application_id: "com.github.NRDfoss.helo-world-in-vala",
+            application_id: "com.github.NRDfoss.gtk-helo-again",
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
