@@ -7,11 +7,23 @@ public class MyApp : Gtk.Application {
     }
 
     protected override void activate () {
+
         var main_window = new Gtk.ApplicationWindow (this) {
             default_height = 300,
             default_width = 300,
             title = "hello amogis"
         };
+
+        var button_hello = new Gtk.Button.with_label ("amogis") {
+            margin = 12
+        };
+        
+        button_hello.clicked.connect (() => {
+            button_hello.label = "amogis";
+            button_hello.sensitive = true;
+        });
+
+        main_window.add (button_hello);
         main_window.show_all ();
     }
 
