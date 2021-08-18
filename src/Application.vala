@@ -8,7 +8,7 @@ public class MyApp : Gtk.Application{
 
     protected override void activate(){
 
-        var label = new Gtk.label("amogis again???");
+        var label = new Gtk.Label("amogis again???");
 
         var main_window = new Gtk.ApplicationWindow (this) {
             default_height = 300,
@@ -26,7 +26,6 @@ public class MyApp : Gtk.Application{
         });
 
         main_window.add(label);
-        main_window.add(button_hello);
         main_window.show_all();
     }
 
