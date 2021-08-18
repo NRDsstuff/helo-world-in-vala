@@ -19,8 +19,8 @@ public class MyApp : Gtk.Application {
         };
         
         button_hello.clicked.connect (() => {
-            button_hello.label = "amogis";
-            button_hello.sensitive = true;
+            button_hello.label = "WHY DID YOU CLICK MEEEEEEEEEEEEEE";
+            button_hello.sensitive = false;
         });
 
         main_window.add (button_hello);
