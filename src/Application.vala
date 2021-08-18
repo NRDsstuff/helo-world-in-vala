@@ -1,12 +1,14 @@
-public class MyApp : Gtk.Application {
-    public MyApp () {
-        Object (
+public class MyApp : Gtk.Application{
+    public MyApp (){
+        Object(
             application_id: "com.github.NRDfoss.helo-world-in-vala",
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
-    protected override void activate () {
+    protected override void activate(){
+
+        var label = new Gtk.label("amogis again???");
 
         var main_window = new Gtk.ApplicationWindow (this) {
             default_height = 300,
@@ -18,16 +20,17 @@ public class MyApp : Gtk.Application {
             margin = 12
         };
         
-        button_hello.clicked.connect (() => {
+        button_hello.clicked.connect(() => {
             button_hello.label = "WHY DID YOU CLICK MEEEEEEEEEEEEEE";
             button_hello.sensitive = false;
         });
 
-        main_window.add (button_hello);
-        main_window.show_all ();
+        main_window.add(label);
+        main_window.add(button_hello);
+        main_window.show_all();
     }
 
-    public static int main (string[] args) {
-        return new MyApp ().run (args);
+    public static int main(string[] args){
+        return new MyApp().run (args);
     }
 }
